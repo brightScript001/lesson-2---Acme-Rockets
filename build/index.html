@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acme Rockets</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js"></script>
 </head>
 
 <body class="min-h-screen bg-slate-50 dark:bg-black dark:text-white">
@@ -15,15 +16,31 @@
                 <a href="#hero">🚀 Acme Rockets</a>
             </h1>
             <div>
-                <button id="mobile-open-button" class="text-3xl sm:hidden focus:outline-none">
-                    &#9776;
+                <button id="hamburger-button" class="text-3xl md:hidden cursor-pointer relative w-8 h-8">
+                    <!-- &#9776; -->
+                    <div
+                        class="bg-white w-8 h-1 rounded absolute top-4 mt-0.5 transition-all duration-500 before:content[''] before:bg-white before:w-8 before:h-1 before:rounded before:absolute before:-translate-x-4 before:-translate-y-3 before:transition-all before:duration-500 after:content[''] after:bg-white after:w-8 after:h-1 after:rounded after:absolute after:-translate-x-4 after:translate-y-3 after:transition-all after:duration-500 ">
+                    </div>
                 </button>
-                <nav class="hidden sm:block space-x-8 text-xl" aria-label="main">
+                <nav class="hidden md:block space-x-8 text-xl" aria-label="main">
                     <a href="#rockets" class="hover:opacity-90">Our Rockets</a>
                     <a href="#testimonials" class="hover:opacity-90">Testimonials</a>
                     <a href="#contact" class="hover:opacity-90">Contact Us</a>
                 </nav>
             </div>
+        </section>
+        <section id="mobile-menu"
+            class="absolute top-68 bg-black w-full text-5xl flex-col justify-content-center origin-top animate-open-menu hidden">
+            <button class="text-8xl self-end px-6">
+                <!-- &times; -->
+            </button>
+            <nav class="flex flex-col min-h-screen item-center py-8" aria-label="mobile">
+                <a href="#hero" class="w-full text-center py-6 hover:opacity-90">Home</a>
+                <a href="#rockets" class="w-full text-center py-6 hover:opacity-90">Our Rockets</a>
+                <a href="#testimonials" class="w-full text-center py-6 hover:opacity-90">Testimonials</a>
+                <a href="#contact" class="w-full text-center py-6 hover:opacity-90">Contact Us</a>
+                <a href="#footer" class="w-full text-center py-6 hover:opacity-90">Legal</a>
+            </nav>
         </section>
     </header>
     <main class="max-w-4xl mx-auto">
@@ -93,11 +110,11 @@
                     <p
                         class="text-2xl sm:text-3xl text-left mt-2 text-white dark:text-slate-400 before:content-['\201C'] before:font-serif before:absolute before:top-0 before:left-0 before:text-9xl before:text-white before:opacity-25 before:transform before:translate-x-2 before:translate-y-2 after:content-['\201D'] after:font-serif after:absolute after:-bottom-20 after:right-0 after:text-9xl after:text-white after:opacity-25 after:transform after:-translate-x-2 after:-translate-y-2">
                         Acme
-                        has always been there
+                        ~ has always been there
                         for me. Their Explorer rocket arrived in a wooden crate as expected.
                         Life-long customer! A++ shopping experience.
                     </p>
-                </blockquote>
+                </blockquote>`
                 <figcaption class="italic text-xl sm:text-2xl text-right mt-2 text-slate-500 dark:text-slate-400">
                     &#8212;Wile E. Coyote, Genius
                 </figcaption>
